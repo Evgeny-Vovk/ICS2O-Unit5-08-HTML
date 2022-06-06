@@ -36,5 +36,5 @@ function calculate() {
   }
   
   //output
-  document.getElementById("answer").innerHTML = "The answer is: " + repeat
+  document.getElementById("answer").innerHTML = "The answer is: " + fullNumber + " \nand the remaining is: " + repeat
 }
