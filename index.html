@@ -27,16 +27,25 @@
         </div>
       </header>
       <main class="mdl-layout__content margin-left">
-        <img src="./img/infinity.png" alt="loop" class="margin-top" width="250px" height="`150px"/>
-        <h1>Enter the number you want n to stand for in the this formula: </h1>
-        <img src="./img/loop-formula.png" alt="formula"/>
+        <img src="./img/division.png" alt="group division" class="margin-top"/>
+        <h1>Enter the two numbers you want to devide into groups: </h1>
         <br>
         <br>
         <!-- Numeric Textfield -->
+        <p>The first number:</p>
         <form action="#">
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number">
-            <label class="mdl-textfield__label" for="number">Number...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number1">
+            <label class="mdl-textfield__label" for="number1">Number...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <p>divide by the second number:</p>
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number2">
+            <label class="mdl-textfield__label" for="number2">Number...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
