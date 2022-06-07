@@ -14,27 +14,39 @@ if (navigator.serviceWorker) {
 function calculate() {
 
   //input
-  const number1 = parseInt(document.getElementById('number1').value)
-  const number2 = parseInt(document.getElementById('number2').value)
-  var repeat = number1
+  const firstInput = parseInt(document.getElementById('firstInput').value)
+  const secondInput = parseInt(document.getElementById('secondInput').value)
+  var repeat = firstInput
   var fullNumber = 0
 
   // process
-  if ((number1 > 0) && (number2 > 0)){
-    while (repeat >= number2) {
-      repeat = repeat - number2
+  if ((firstInput > 0) && (secondInput > 0)){
+    while (repeat >= secondInput) {
+      repeat = repeat - secondInput
       ++fullNumber
     }
   }
-  else if ((number1 < 0) && (number2 < 0)){
-    number2 = Math.abs(number2)
-    repeat = Math.abs(repeat)
-    while (repeat >= number2) {
-      repeat = repeat - number2
+  else if ((firstInput < 0) && (secondInput < 0)){
+    while (Math.abs(repeat) >= Math.abs(secondInput)) {
+      repeat = Math.abs(repeat) - Math.abs(secondInput)
       ++fullNumber
     }
+    repeat = repeat * -1
   }
-  
+  else if ((firstInput < 0) || (secondInput < 0)){
+    while (Math.abs(repeat) >= Math.abs(secondInput)) {
+      repeat = Math.abs(repeat) - Math.abs(secondInput)
+      ++fullNumber
+    }
+    fullNumber = fullNumber * -1
+    repeat = repeat * -1
+  }
+
   //output
-  document.getElementById("answer").innerHTML = "The answer is: " + fullNumber + " \nand the remaining is: " + repeat
+  if (repeat == 0){
+    document.getElementById("answer").innerHTML = "The full number is " + fullNumber + " and there is no remainder."
+  }
+  else {
+  document.getElementById("answer").innerHTML = "The full number is " + fullNumber + " and the remainder is: " + repeat
+  }
 }
