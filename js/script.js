@@ -14,8 +14,8 @@ if (navigator.serviceWorker) {
 function calculate() {
 
   //input
-  const firstInput = parseInt(document.getElementById('firstInput').value)
-  const secondInput = parseInt(document.getElementById('secondInput').value)
+  const firstInput = parseInt(document.getElementById('first-input').value)
+  const secondInput = parseInt(document.getElementById('second-input').value)
   var repeat = firstInput
   var fullNumber = 0
 
