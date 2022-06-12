@@ -31,7 +31,6 @@ function calculate() {
       repeat = Math.abs(repeat) - Math.abs(secondInput)
       ++fullNumber
     }
-    repeat = repeat * -1
   }
   else if ((firstInput < 0) || (secondInput < 0)){
     while (Math.abs(repeat) >= Math.abs(secondInput)) {
@@ -39,7 +38,6 @@ function calculate() {
       ++fullNumber
     }
     fullNumber = fullNumber * -1
-    repeat = repeat * -1
   }
 
   //output
