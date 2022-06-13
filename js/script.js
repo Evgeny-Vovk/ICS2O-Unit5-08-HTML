@@ -45,6 +45,6 @@ function calculate() {
     document.getElementById("answer").innerHTML = "The full number is " + fullNumber + " and there is no remainder."
   }
   else {
-  document.getElementById("answer").innerHTML = "The full number is " + fullNumber + " and the remainder is: " + repeat
+  document.getElementById("answer").innerHTML = "The full number is " + fullNumber + " and the remainder is " + repeat + "."
   }
 }
